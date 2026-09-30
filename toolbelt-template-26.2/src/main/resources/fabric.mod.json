@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "toolbelt",
+	"version": "${version}",
+	"name": "Toolbelt",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Sadbunny"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/toolbelt/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"sadbunny.toolbelt.Toolbelt"
+		],
+		"client": [
+			"sadbunny.toolbelt.client.ToolbeltClient"
+		],
+		"fabric-datagen": [
+			"sadbunny.toolbelt.client.ToolbeltDataGenerator"
+		]
+	},
+	"mixins": [
+		"toolbelt.mixins.json",
+		{
+			"config": "toolbelt.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~26.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
